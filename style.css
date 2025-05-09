@@ -1,0 +1,83 @@
+body {
+    background-color: #0d0d0d; /* Dark base for contrast */
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.glassy-navbar {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-text {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.glass-heading {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: #f0f0f0;
+}
+
+/* Custom structure with div > button > span and media query */
+div {
+    button {
+        span {
+            @media screen and (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            padding: 8px 16px;
+        }
+    }
+    h1 {
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .glass-heading {
+        font-size: 28px;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .glass-card {
+        padding: 1rem;
+    }
+    .btn-danger {
+        width: 100%;
+    }
+}
